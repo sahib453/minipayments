@@ -1,0 +1,5 @@
+howw to use mongo replset ,
+dockerfile
+
+1/docker build ./ -t mongodb:4.7-replset
+docker run --name mongodb-replset22 -p 27107:27107 -d mongodb:4.7-replset
