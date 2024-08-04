@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
+
 
 
 const Dashboard = React.lazy(()=>import('./frontend/Dashboard'))
@@ -14,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+              <Route path="/" element={<Navigate to="/signup" replace />} />
         <Route path='/signup' element={<Suspense fallback={'Loading...'}><Signup /></Suspense>}/>
         <Route path='/dashboard' element={<Suspense fallback={'Loading...'}> <Dashboard/> </Suspense> } />
         <Route path='/signin' element={<Suspense fallback={"Loading..."} ><Signin/></Suspense>} />
