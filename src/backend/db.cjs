@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
+const dbUri = process.env.MONGO_URI;
 
 const connectDB = async()=>{
-    await mongoose.connect('mongodb://localhost:27017/paytm').then(()=>{
+    await mongoose.connect(dbUri).then(()=>{
     console.log('successful connection')
 }).catch((err)=>console.log('Error there',err))
 }
