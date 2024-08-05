@@ -20,7 +20,7 @@ export default function Signin(){
     <Inputbox  label={'Username'} placeholder={'user2312'} onChange={(e)=>setUsername(e.target.value)}/>
     <Inputbox type={'password'} label={'Password'} placeholder={'password212@12'} onChange={(e)=>setPassword(e.target.value)}/>
     <Button label={'Sign In'} onClick={async()=>{
-        const response = await axios.post('https://minipaymentbackend-api.vercel.app/user/login',{
+        const response = await axios.post('https://minipaymentbackend-api.vercel.app/login',{
             username:user,
             password
         })
