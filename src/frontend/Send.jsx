@@ -26,7 +26,7 @@ export default function Send() {
           return;
         }
 
-        const response = await axios.get('http://localhost:3000/user/me', {
+        const response = await axios.get('https://minipaymentbackend-api.vercel.app/user/me', {
           headers: {
             Authorization: token,
           },
@@ -60,7 +60,7 @@ export default function Send() {
         return;
       }
 
-      await axios.post('http://localhost:3000/account/transfer', {
+      await axios.post('https://minipaymentbackend-api.vercel.app/account/transfer', {
         to: id,
         amount
       }, {
