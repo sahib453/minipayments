@@ -60,7 +60,7 @@ export default function Send() {
         return;
       }
 
-      await axios.post('https://minipaymentbackend-api.vercel.app/account/transfer', {
+      await axios.post('https://minipaymentbackend-api.vercel.app/transfer', {
         to: id,
         amount
       }, {
