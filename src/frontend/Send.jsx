@@ -26,7 +26,7 @@ export default function Send() {
           return;
         }
 
-        const response = await axios.get('https://minipaymentbackend-api.vercel.app/user/me', {
+        const response = await axios.get('https://minipaymentbackend-api.vercel.app/me', {
           headers: {
             Authorization: token,
           },
