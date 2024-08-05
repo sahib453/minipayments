@@ -15,7 +15,7 @@ export default function Users(){
                 const token = localStorage.getItem('token')
                 if (!token) return;
 
-                const response = await axios.get('http://localhost:3000/user/me', {
+                const response = await axios.get('https://minipaymentbackend-api.vercel.app/me', {
                     headers: { authorization: token }
                 })
                 setLoggedInUsername(response.data.username)
@@ -26,7 +26,7 @@ export default function Users(){
 
         const fetchUsers = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/user/bulk?filter=' + filter)
+                const response = await axios.get('https://minipaymentbackend-api.vercel.app/bulk?filter=' + filter)
                 const filteredUsers = response.data.users.filter(user => user.username !== loggedInUsername)
                 setUsers(filteredUsers)
             } catch (err) {
