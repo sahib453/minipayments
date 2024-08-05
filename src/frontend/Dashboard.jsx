@@ -25,7 +25,7 @@ try{
 
 const token = localStorage.getItem('token')
 
-const response  = await axios.get('https://minipaymentbackend-api.vercel.app/user/me',{
+const response  = await axios.get('https://minipaymentbackend-api.vercel.app/me',{
     headers:{
         authorization:token
     }
