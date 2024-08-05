@@ -5,7 +5,11 @@ const accountRouter = require('./routes/account.cjs')
 const app = express()
 const cors = require('cors')
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin:["https://https://minipayments.vercel.app/"],
+    methods:["POST","GET"],
+    credentials:true
+}))
 connectDB()
 
 app.get('/',async(req,res)=>{
