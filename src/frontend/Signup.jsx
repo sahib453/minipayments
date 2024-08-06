@@ -27,7 +27,7 @@ const navigate = useNavigate()
     <Inputbox label={"Full Name"} placeholder={"Joe Biden"} onChange={e=>setName(e.target.value)}/>
     <Button onClick={
       async()=>{
-        const response = await axios.post('https://minipaymentbackend-api.vercel.app/user/signup',{
+        const response = await axios.post('https://minipaymentbackend-api.vercel.app/signup',{
           username,
           password,
           name
